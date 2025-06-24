@@ -6,8 +6,6 @@ console.log('Script started successfully');
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
-    WA.ui.actionBar.removeButton('roomListIcon');
-    WA.ui.actionBar.removeButton('invite-btn');
 
     WA.player.setOutlineColor(158, 164, 171);
     if (WA.player.tags.includes("admin")) {
@@ -20,7 +18,7 @@ WA.onInit().then(() => {
     WA.ui.actionBar.addButton({
         id: 'guide-btn',
         // @ts-ignore
-        label: 'Guide d\'utilisation',
+        label: 'Guide d\'utilisation', 
         callback: () => {
             WA.ui.modal.closeModal();
                 setTimeout(() => {
